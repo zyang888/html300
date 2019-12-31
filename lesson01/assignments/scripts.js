@@ -9,7 +9,6 @@ $(function() {
     const val = $('.reduce-input').val();
     const num = parseInt(val);
     // Verify the user gave us a re
-
     if (!isNaN(num)) {
       // Add our new number to the data array
       data.push(num);
@@ -30,9 +29,9 @@ $(function() {
     const copy = [];
     // Verify the user gave us a real number
     if (!isNaN(num)) {
-      // Add our new number to the data array
+      // Add element to new array
       data.forEach(item => copy.push(item+num));
-      // Add our new total to the page
+      // print result
       $('.res2').text('['+copy+']');
       // Reset the input value to an empty string
       $('.forEach-input').val('');
@@ -45,7 +44,7 @@ $(function() {
     const num = parseInt(val);
     // Verify the user gave us a real number
     if (!isNaN(num)) {
-      // Use reduce to convert our array of numbers into a single value - the sum of all of the numbers
+      // map result with array index
       const newArr = data.map(function(val, index){
             return {key:index, value:Math.pow(val,num)};
         })
@@ -62,7 +61,7 @@ $(function() {
     const num = parseInt(val);
     // Verify the user gave us a real number
     if (!isNaN(num)) {
-      // Use reduce to convert our array of numbers into a single value - the sum of all of the numbers
+      // filter array with user input
       const result = data.filter(item => item > num);
       // Add our new total to the page
       $('.res4').text(result);
