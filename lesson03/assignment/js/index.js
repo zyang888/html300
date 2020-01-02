@@ -1,6 +1,6 @@
 const temp = [];
 
-$.getJSON("./data/data.json", function(data) {
+$.getJSON("https://raw.githubusercontent.com/zyang888/html300/master/lesson03/assignment/data/data.json", function(data) {
   $.each(data, function(idx, obj){
           temp.push(obj);
   });
