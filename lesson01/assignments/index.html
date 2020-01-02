@@ -1,35 +1,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment 1 - Part 2 Example</title>
-    <!-- jQuery CDN -->
-    <script 
-        src="https://code.jquery.com/jquery-3.3.1.js" 
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous">
-    </script>
-    <!-- Local Files -->
-    <script src="scripts.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Part 2 Example</title>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+  </script>
+  <!-- Local Files -->
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main class="main">
-        <h1>Using ES6+ Methods</h1>
-        <section class="input-set">
-            <!-- Input -->
-            <input type="text" class="input">
-            <!-- Submit for Input -->
-            <input class="submit" type="submit"></input>
-            <!-- Result markup with hook for answer -->
-            <p class="markup">My total with reduce is now: <span class="sum"></span></p>
-        </section>
-       
-        
-    </main>
+  <main class="main">
+    <h1>Using ES6+ Methods</h1>
+    <p>The input array is [<span class="array"></span>]</p>
+    <section class="input-set">
+      <h3>1. reduce function, add user input to array, then sum all elements.</h3>
+      <!-- Input -->
+      <input type="text" class="reduce-input">
+      <!-- Submit for Input -->
+      <input class="reduce" type="submit" value="Push and Reduce"></input>
+      <!-- Result markup with hook for answer -->
+      <p class="markup">Push and Reduce: <span class="res1"></span></p>
+    </section>
+
+    <section class="input-set">
+      <h3>2. forEach function, add user input to each element.</h3>
+      <!-- Input -->
+      <input type="text" class="forEach-input">
+      <!-- Submit for Input -->
+      <input class="forEach" type="submit" value="Add to Each Element"></input>
+      <!-- Result markup with hook for answer -->
+      <p class="markup">Add to Each Element: <span class="res2"></span></p>
+    </section>
+
+    <section class="input-set">
+      <h3>3. map function, apply power to each element.</h3>
+      <!-- Input -->
+      <input type="text" class="map-input">
+      <!-- Submit for Input -->
+      <input class="map" type="submit" value="Power Then Map"></input>
+      <!-- Result markup with hook for answer -->
+      <p class="markup">Mapped Element: <span class="res3"></span></p>
+    </section>
+
+    <section class="input-set">
+      <h3>4. filter function, show element that is bigger than user input.</h3>
+      <!-- Input -->
+      <input type="text" class="filter-input">
+      <!-- Submit for Input -->
+      <input class="filter" type="submit" value="Filter"></input>
+      <!-- Result markup with hook for answer -->
+      <p class="markup">Filtered Array: <span class="res4"></span></p>
+    </section>
+
+
+  </main>
 </body>
 
 </html>

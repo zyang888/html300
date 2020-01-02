@@ -1,6 +1,65 @@
-// Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
+// Uses 2 partials compiled with a imports in main.scss
+@import 'css/_variables';
+@import 'css/_base';
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+// 2 Declares and uses mixin properly
+@mixin flex-display($direction: row, $space: flex-start, $align: center) {
+  display: flex;
+  justify-content: $space;
+  align-items: $align;
+}
 
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+a {
+  text-decoration: none;
+  color: $text-grey;
+}
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+.main {
+  @include flex-display($space: space-around);
+  border-style: solid;
+  border-color: $background-grey;
+  border-width: 2em;
+  color: $text-grey;
+  width: 50em;
+  padding: 1em 0;
+}
+/*--------------------------------------------------------------
+# container
+--------------------------------------------------------------*/
+// Uses 2 instances of nesting
+.profile {
+  text-align: center;
+  width: 30%;
+  img {
+    width: 80%;
+    border-radius: 50%;
+  }
+  h1,
+  p {
+    margin: 0.15em 0;
+  }
+}
+
+.info {
+  width: 50%;
+  height: 90%;
+  background-color: $background-grey;
+  padding: 1em;
+  p {
+    margin: 0.5em 0;
+    display: block;
+  }
+  div {
+    height: 2em;
+    @include flex-display;
+  }
+  img {
+    height: 100%;
+    margin-right: 1em;
+  }
+}
