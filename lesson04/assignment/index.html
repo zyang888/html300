@@ -1,15 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./js/index.js"></script>
+  <title>project name goes here</title>
 </head>
-<body>
-  <main class="main">
 
+<body>
+  <nav>
+    <img id="nav-pic" alt="nav-pic">
+    <div class="Menu">
+      <ul class="Menu-list" data-offset="10">
+        <li class="Menu-list-item" data-offset="20" onclick>
+          Home
+          <span class="Mask"><span>Home</span></span>
+          <span class="Mask"><span>Home</span></span>
+        </li>
+        <li class="Menu-list-item" data-offset="16" onclick>
+          About
+          <span class="Mask"><span>About</span></span>
+          <span class="Mask"><span>About</span></span>
+        </li>
+        <li class="Menu-list-item" data-offset="12" onclick>
+          Work
+          <span class="Mask"><span>Work</span></span>
+          <span class="Mask"><span>Work</span></span>
+        </li>
+        <li class="Menu-list-item" data-offset="8" onclick>
+          Contact
+          <span class="Mask"><span>Contact</span></span>
+          <span class="Mask"><span>Contact</span></span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="about">
+      <img id="main-pic" alt="profile-pic">
+      <article>
+        <div>
+          <h1>Engineer & Programmer<br>ZT Yang, PE</h1>
+          <p>Praesent sed aliquam arcu, non accumsan neque. In odio ante, vulputate ac magna vel, pharetra lobortis quam. Duis enim tortor, egestas et felis id, lobortis malesuada magna. Nunc sit amet sagittis nisi, eu semper nisl. Cras ut dictum.
+          </p>
+          <button>Download cv</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="resume">
+      <div>
+        <h2>What I do</h2>
+        <article>
+          <h3>Structure Engineering</h3>
+          <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales odio</p>
+        </article>
+        <article>
+          <h3>Programming</h3>
+          <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales odio</p>
+        </article>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <article>
+          <h3>UW Seattle / <p>MS Aerospace Engineering</p><br>2017 Graduation Speaker</h3>
+          <img src="./uw.jpg" alt="">
+          <h3>UC Berkeley / <p>BS Mechanical Engineering</p>
+          </h3>
+          <img src="https://me.berkeley.edu/wp-content/uploads/2019/01/ME_large_banner.png" alt="">
+        </article>
+      </div>
+    </section>
+
+
+    <section class="experience">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="entry">
+          <div class="title">
+            <h3>2014 - Present</h3>
+            <p>Title, Company</p>
+          </div>
+          <div class="body">
+            <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+            <ul>
+              <li>Rerum sit libero possimus amet excepturi</li>
+              <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
+              <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="title">
+            <h3>2010 - Present</h3>
+            <p>Title, Company</p>
+          </div>
+          <div class="body">
+            <p>Voluptatibus veniam ea reprehenderit atque reiciendis non laborum adipisci ipsa pariatur omnis.</p>
+            <ul>
+              <li>Rerum sit libero possimus amet excepturi</li>
+              <li>Exercitationem enim dolores sunt praesentium dolorum praesentium</li>
+              <li>Modi aut dolores dignissimos sequi sit ut aliquid molestias deserunt illo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
 </body>
+
 </html>
