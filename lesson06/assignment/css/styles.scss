@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import 'css/_variables';
+@import 'css/_menu_animation';
+
+html {
+  font-family: 'Muli', sans-serif;
+}
+@mixin flex-display($direction: row, $wrap:wrap, $space: flex-start, $align: center) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $space;
+  align-items: $align;
+  flex-direction: $direction;
+  align-items: flex-start;
+}
+@mixin main-container {
+  width: 95%;
+  margin: auto;
+}
+/*--------------------------------------------------------------
+# element
+--------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  color: $blue;
+  font-weight: 900;
+}
+
+p {
+  color: grey;
+}
+
+h3>p {
+  display: inline;
+  font-weight: 100;
+  color: grey;
+  margin: 0;
+}
+
+img {
+  width:100%;
+}
+
+/*--------------------------------------------------------------
+# nav bar
+--------------------------------------------------------------*/
+nav {
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  width: 160px;
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  /* Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
+  border-right-style: solid;
+  border-color: grey;
+  text-align: center;
+
+  img {
+    border-radius: 50%;
+    width: 80%;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    color: black;
+  }
+
+  a:hover {
+    color: #f1f1f1;
+  }
+}
+@media screen and (max-height: 450px) {
+  nav {
+    padding-top: 15px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+}
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+main {
+  margin-left: 160px;
+  /* Same as the width of the sidebar */
+}
+
+.about {
+  @include flex-display;
+  @include main-container;
+
+  img {
+    width: 50%;
+  }
+
+  article {
+    width: 50%;
+    div {
+      width: 70%;
+      margin: auto;
+    }
+  }
+}
+
+.resume {
+  @include main-container;
+  @include flex-display($space:space-between);
+  div {
+    width: 48%;
+  }
+}
+
+.experience {
+  @include main-container;
+  margin: auto;
+}
