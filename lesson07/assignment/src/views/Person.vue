@@ -6,10 +6,5 @@
 
 export default {
   name: 'personpage',
-  data () {
-    return {
-
-    }
-  }
-}
+};
 </script>
