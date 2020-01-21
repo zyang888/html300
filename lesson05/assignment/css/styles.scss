@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+# variables
+--------------------------------------------------------------*/
+
+$red: #F1352B;
+$green: #7ACB00;
+$purple: #6E27C5;
+$orange: #FF6600;
+$blue: #150F96;
+
+/*--------------------------------------------------------------
+# element
+--------------------------------------------------------------*/
+header {
+  background-color: $red;
+  height: 5em;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  margin: auto;
+}
+
+nav {
+  background-color: $green;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  text-align: center;
+  height: 3em;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  height: 28em;
+}
+
+section {
+  background-color: $orange;
+  width: 70%;
+  display: flex;
+}
+
+aside {
+  background-color: $purple;
+  width: 30%;
+  display: flex;
+}
+
+footer {
+  background-color: $blue;
+  height: 5em;
+  display: flex;
+}
+
+body {
+  color: white;
+  margin: 0;
+}
