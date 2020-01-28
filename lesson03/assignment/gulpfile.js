@@ -1,38 +1,32 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    autoprefix = require('gulp-autoprefixer'),
-    watch = require('gulp-watch'),
-    plumber = require('gulp-plumber'),
-    gutil = require('gulp-util'),
-    minifycss = require('gulp-minify-css'),
-    browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+const browserSync = require('browser-sync').create();
 
-gulp.task('sass', function() {
-    gulp.src('css/*.scss')
-        .pipe(plumber())
-        .pipe(sass())
-        .pipe(
-            autoprefix({
-                browsers: ['> .5%'],
-            })
-        )
-        .pipe(minifycss({ compatibility: 'ie8' }))
-        .pipe(gulp.dest('css/'))
-        .pipe(browserSync.stream());
-});
+// compile sass into css
+function style() {
+  // 1. where is my sass file
+  return gulp.src('./css/*.scss')
+  // 2. pass that file through sass compiler
+  .pipe(sass().on('error', sass.logError))
+  // 2.1. clean css
+  .pipe(cleanCSS({compatibility: 'ie8'}))
+  // 3. where do I save the comiled CSS?
+  .pipe(gulp.dest('./css'))
+  // 4. stream changes to all browser
+  .pipe(browserSync.stream());
+}
 
-gulp.task('watch', function() {
-    gulp.watch('css/*.scss', ['sass']);
-    gulp.watch('*.html').on('change', browserSync.reload);
-});
+function watch() {
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  });
+  gulp.watch('./css/*.scss', style);
+  gulp.watch('./js/*.js').on('change',browserSync.reload);
+  gulp.watch('./*.html').on('change', browserSync.reload);
+}
 
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        notify: false,
-        server: {
-            baseDir: './',
-        },
-    });
-});
-
-gulp.task('default', ['watch', 'browser-sync']);
+exports.style = style;
+exports.watch = watch;
